@@ -1,0 +1,20 @@
+/**
+ * Removes a lot of browser defaults.
+ * https://tailwindcss.com/docs/preflight
+ */
+
+@tailwind base;
+@tailwind utilities;
+
+html {
+  /**
+   * Cancel the line-height: 1.5 change, it seems too much.
+   * The 1.15 value comes from normalize.css. (cf. tailwind.output.css)
+   */
+  line-height: 1.15;
+}
+
+button:focus {
+  /** Removes the blue outline. **/
+  outline: none;
+}
